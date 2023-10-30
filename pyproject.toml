@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "3.11.3"
-pandas = "^2.1.1"
+pandas = "^2.1.2"
 openpyxl = "^3.1.2"
 pytest = "^7.4.2"
 isort = "^5.12.0"
@@ -28,5 +28,6 @@ profile = "black"
 known_third_party = []
 
 [tool.taskipy.tasks]
-
 format = "isort . && blue ."
+test = "poetry run pytest -v"
+run = "poetry run python app/main.py"

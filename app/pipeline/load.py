@@ -20,5 +20,6 @@ def load_excel(
 
     if not os.path.exists(output_path):
         os.makedirs(output_path)
+        
     data_frame.to_excel(f'{output_path}/{file_name}.xlsx', index=False)
     return 'Arquivo salvo com sucesso'
